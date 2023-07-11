@@ -29,11 +29,6 @@ app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 
 app.use("/assets", express.static(path.join(__dirname, "public/assets")));
 
-app.use(cors({
-  origin: "*"
-}));
-
-
 /* FILE STORAGE */
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
